@@ -196,6 +196,27 @@ header{
     width: 10vh;
 }
 
+#linked_img{
+    width: 5vh;
+    z-index: 9999;
+}
+
+#linked{
+    position: absolute;
+    left:43vh;
+    top: 12.3vh;
+    z-index: 9999;
+}
+
+#linked:hover{
+    top:10.3vh;
+    left:40.5vh;
+}
+
+#linked_img:hover{
+    width: 10vh;
+}
+
 #dom_tekst b{
     font-size: 3vh;
 }
