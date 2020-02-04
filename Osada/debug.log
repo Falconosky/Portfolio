@@ -1,0 +1,18 @@
+[1028/161250.288:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::PEB<crashpad::process_types::internal::Traits64>]: Ukoñczono tylko czêœæ ¿¹dania ReadProcessMemory lub WriteProcessMemory. (0x12B)
+[1028/161250.288:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::PEB<crashpad::process_types::internal::Traits64>]: Ukoñczono tylko czêœæ ¿¹dania ReadProcessMemory lub WriteProcessMemory. (0x12B)
+[1028/161250.288:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::PEB<crashpad::process_types::internal::Traits64>]: Ukoñczono tylko czêœæ ¿¹dania ReadProcessMemory lub WriteProcessMemory. (0x12B)
+[1028/161250.297:ERROR:process_info.cc(545)] ReadProcessData failed
+[1028/161250.297:ERROR:process_info.cc(545)] ReadProcessData failed
+[1028/161250.303:ERROR:process_info.cc(545)] ReadProcessData failed
+[1028/161250.303:ERROR:process_reader_win.cc(242)] ReadMemory at 0x7ffcb64654d0 of 12 bytes failed: Ukoñczono tylko czêœæ ¿¹dania ReadProcessMemory lub WriteProcessMemory. (0x12B)
+[1028/161250.303:ERROR:process_reader_win.cc(242)] ReadMemory at 0x7ffcb64654d0 of 12 bytes failed: Ukoñczono tylko czêœæ ¿¹dania ReadProcessMemory lub WriteProcessMemory. (0x12B)
+[1028/161250.303:ERROR:process_reader_win.cc(242)] ReadMemory at 0x7ffcb64654d0 of 12 bytes failed: Ukoñczono tylko czêœæ ¿¹dania ReadProcessMemory lub WriteProcessMemory. (0x12B)
+[1028/161250.303:WARNING:process_snapshot_win.cc(69)] ReadMemory ExceptionInformation failed
+[1028/161250.303:WARNING:process_snapshot_win.cc(69)] ReadMemory ExceptionInformation failed
+[1028/161250.303:WARNING:process_snapshot_win.cc(69)] ReadMemory ExceptionInformation failed
+[1028/161250.313:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Podjêto próbê uzyskania dostêpu do procesu koñcz¹cego dzia³anie. (0xc000010a)
+[1028/161250.313:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Podjêto próbê uzyskania dostêpu do procesu koñcz¹cego dzia³anie. (0xc000010a)
+[1028/161250.313:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Podjêto próbê uzyskania dostêpu do procesu koñcz¹cego dzia³anie. (0xc000010a)
+[0217/193513.553:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0217/213545.741:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0218/163050.429:ERROR:crash_report_database_win.cc(428)] unexpected header

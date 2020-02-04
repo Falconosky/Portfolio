@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Osada</title>
+        <script type="text/javascript" src="myscripts.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Charm&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"/>
+        <link rel="icon" href="img/favicon.png" type="image/x-icon"/>
+        <link href="https://fonts.googleapis.com/css?family=MedievalSharp&amp;subset=latin-ext" rel="stylesheet">
+    </head>
+    
+    <body onload="map()">
+        <div style="display: none" id="research_window_background">
+            <div style="width: 100vw; height: 100vh;"></div>
+            <div id="research_window">
+                <div id="wygral" style="width=100%;text-align:center;">WYGRAŁ</div><br><div id="gracz" style="width=100%;text-align:center;">GRACZ</div><br><div id="numer" style="width=100%;text-align:center;"></div>
+            </div>
+        </div>
+        <div id="rightarrow"></div>
+        <div id="rightmenu">
+            <div id="resources">
+                <div id="wood" class="resources"></div>
+                <div id="iron" class="resources"></div>
+                <div id="population" class="resources"></div>
+            </div>
+            <div id="buildings">
+                <div class="title" id="title_buildings" onclick="menu_buildings()">
+                    <img src="img/hammer.png" style="float: left; width: 48px; margin-top: 15px; margin-left: 15px;">
+                    <p><b>BUDYNKI</b></p>
+                </div>
+            </div>
+            <div id="army">
+                <div class="title" id="title_army" onclick="menu_army()">
+                    <img src="img/warrior.png" style="float: left; width: 48px; margin-top: 15px; margin-left: 15px;">
+                    <p><b>WOJSKO</b></p>
+                </div>
+            </div>
+        </div>
+        <div id="pts_fields"></div>
+        <div id="ptss_fields"></div>
+        <div id="end" onclick="turaa()"></div>
+    </body>
+</html>

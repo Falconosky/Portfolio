@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Domowe klimaty</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://www.domoweklimaty.pl/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+                <link rel="stylesheet"          href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+          $( function() {
+            $( "#accordion" ).accordion();
+          } );
+        </script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script>
+            $(function() {
+            $( "#datepicker" ).datepicker();
+            });
+            function show_dp(){
+            $( "#datepicker" ).datepicker('show');
+            }
+        </script>
+    
+</head>
+<body>
+    
+    <div id="popup">
+                <div id="popup-container">
+                    <span class="close" ><div style="position: absolute;top:-3px; right: 6px;">x</div></span>
+                    <h2>Pozostaw numer telefonu i wybierz termin spotkania, <br> a skontaktujemy się z Tobą za: </h2>
+                    
+                    <form id="form-rezults" method="post">
+                    <div id="options-alert">Wybierz termin:</div>                 
+                        
+                        <div id="popup_lewy">
+                            
+                            <label class="button-r-box">1 minutę
+                                <input type="radio" id="1m" class="popup-button" name="radAnswer"/>
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="button-r-box">2 godziny
+                                <input type="radio" id="2g" class="popup-button" name="radAnswer"/>
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="button-r-box">jutro
+                                <input type="radio" id="tomorrow" class="popup-button" name="radAnswer"/>
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="button-r-box">pojutrze
+                                <input type="radio" id="after_tomorrow" class="popup-button" name="radAnswer"/>
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="button-r-box" style="display: none">inna data
+                                <input type="radio" id="others" class="popup-button" onclick="show_dp();" name="radAnswer"/>
+                                <span class="checkmark"></span>
+                            </label>
+                            <br>
+
+                            <input type="text" id="datepicker" class="datepicker"/>
+                        </div>
+                        <div id="tel-alert"></div>
+                    <div id="popup_prawy">
+                        <div id="tel-alert"></div>
+                        <input id="tel" class="tel-form" type="tel" placeholder="Wpisz numer telefonu" name="tel-number" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" required><br>
+                        <input type="button" id="subimit" class="popup-summary" value="USTAL TERMIN" onclick="total()" value="Get Total">
+                    </div>
+                        
+
+                    
+                    <div id="display"></div>
+                        
+                    </form>
+                        
+                </div>
+            <div class="popup-background"></div>
+        </div>
+    
+    <div id="main">
+        <div id="przyciemnienie"></div>
+        <div id="banner"></div>
+        <div id="lang"><i class="fa fa-angle-down"></i>PL<div id="lang_schowane"><a>ENG</a><a>ESP</a><a>GER</a><a>RUS</a></div></div><div id="logowanie"><a href="http://www.google.pl">Zaloguj</a></div>
+        <div id="top_menu" style="font-size: 1.2vw">
+            <img src="img/logo.png" width="13%" id="logo">
+            <div class="top">Kontakt</div>
+            <div class="top"><i style="font-size:1.4vw; vertical-align:middle;" class="fa">&#xf006;</i> Moje listy</div>
+            <div class="top">O nas</div>
+            <div class="top">Forum</div>
+            <div class="top">Poradnik</div>
+            <div class="top">Zakup Projektu</div>
+            <div id="proj" class="top">Projekty domów <i class="fa fa-angle-down"></i><div id="proj_sch"><a>Wolno Stojący</a><a>Bliźniak</a><a>Szeregowy</a><a>Dwupokoleniowy</a></div></div>
+        </div>
+        <div id="menu">
+            <h2>Znajdź projekt wymarzonego domu!</h2>
+            <p>Przeglądaj ponad 500 autorskich projektów!</p>
+            <div id="menu_tab">
+                <div id="typ_budynku">
+                    <b style="font-size: 1vw">Typ budynku</b><br>
+                    <select class="custom-select" id="guzik">
+                        <option value="jednorodzinny">Jednorodzinny</option>
+                        <option value="bliźniak">Bliźniak</option>
+                        <option value="szeregowy">Szeregowy</option>
+                        <option value="dwupokoleniowy">Dwupokoleniowy</option>
+                     </select>
+                </div>
+                <div id="kondygnacja">
+                    <b style="font-size: 1vw">Kondygnacja</b><br>
+                    <select class="custom-select" id="guzik">
+                        <option value="1">1 piętro</option>
+                        <option value="2">2 piętra</option>
+                        <option value="3">3 piętra</option>
+                        <option value="wiecej">Wiecej</option>
+                     </select>
+                </div>
+                <div id="powierzchnia_uzytkowa">
+                    <b style="font-size: 1vw">Powierzchnia użytkowa</b><br>
+                    <select class="custom-select" id="guzik">
+                        <option value="200">Do 200 m2</option>
+                        <option value="400">Do 400 m2</option>
+                        <option value="600">Do 600 m2</option>
+                        <option value="wiecej">Wiecej</option>
+                     </select>
+                </div>
+                <div id="miejsca_w_garazu">
+                    <b style="font-size: 1vw">Miejsca w garażu</b><br>
+                    <select class="custom-select" id="guzik">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="wiecej">Więcej</option>
+                     </select>
+                </div>
+                <div id="piwnica">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                    <div style="font-size: 1.2vw; float: right">Piwnica</div>
+                </div>
+                <div id="nazwa_projektu">
+                    <b style="font-size: 1vw">Nazwa projektu</b><br>
+                    <input class="form-control" id="exampleFormControlInput1" placeholder="Wpisz nazwę projektu">
+                </div>
+                <div id="szukaj">
+                    <button type="button" class="btn btn-dark btn-block" style="font-size: 1.3vw">SZUKAJ</button>
+                </div>
+                <div id="zaawansowane"><p>Opcje zaawansowane <i class="fa fa-angle-down"></i></p></div>
+            </div>
+        </div>
+    </div>
+    <div id="section-container">
+        <h2>Nasze autorskie projekty</h2>
+        <div id="pic1">
+            <div class="pic_1_d">
+                <img src="img/architecture-balcony-building-534182.jpg" width="100%" style="border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                <div class="podpis_obrazka_1">
+                    <div class="nazwa_domu_1">
+                        Domy Parterowe
+                    </div>
+                    <div class="ilosc_domow_1">
+                        (111)
+                    </div>
+                    <i style="font-size:24px; float: right; padding-right: 17px; padding-top: 16px" class="fa">&#xf054;</i>
+                </div>
+            </div>
+        </div>
+        <div class="pic2">
+            <div class="pic_2_d">
+                <img src="img/architecture-balcony-building-534182.jpg" width="100%" style="border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                <div class="podpis_obrazka_2">
+                    <div class="nazwa_domu">
+                        Domy piętrowe
+                    </div>
+                    <div class="ilosc_domow">
+                        (23)
+                    </div>
+                    <i style="font-size:24px; float: right; padding-right: 17px; padding-top: 3px" class="fa">&#xf054;</i>
+                </div>
+            </div>
+        </div>
+        <div class="pic2">
+            <div class="pic_2_d">
+                <img src="img/architecture-balcony-building-534182.jpg" width="100%" style="border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                <div class="podpis_obrazka_2">
+                    <div class="nazwa_domu">
+                        Domy nowoczesne
+                    </div>
+                    <div class="ilosc_domow">
+                        (23)
+                    </div>
+                    <i style="font-size:24px; float: right; padding-right: 17px; padding-top: 3px" class="fa">&#xf054;</i>
+                </div>
+            </div>
+        </div>
+        <div class="pic2">
+            <div class="pic_2_d">
+                <img src="img/architecture-balcony-building-534182.jpg" width="100%" style="border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                <div class="podpis_obrazka_2">
+                    <div class="nazwa_domu">
+                        Dworki
+                    </div>
+                    <div class="ilosc_domow">
+                        (23)
+                    </div>
+                    <i style="font-size:24px; float: right; padding-right: 17px; padding-top: 3px" class="fa">&#xf054;</i>
+                </div>
+            </div>
+        </div>
+        <div class="pic2">
+            <div class="pic_2_d">
+                <img src="img/architecture-balcony-building-534182.jpg" width="100%" style="border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                <div class="podpis_obrazka_2">
+                    <div class="nazwa_domu">
+                        Domy jednorodzinne
+                    </div>
+                    <div class="ilosc_domow">
+                        (23)
+                    </div>
+                    <i style="font-size:24px; float: right; padding-right: 17px; padding-top: 3px" class="fa">&#xf054;</i>
+                </div>
+            </div>
+        </div>
+        <div class="pic2">
+            <div class="pic_2_d">
+                <img src="img/architecture-balcony-building-534182.jpg" width="100%" style="border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                <div class="podpis_obrazka_2">
+                    <div class="nazwa_domu">
+                        Domy drewniane
+                    </div>
+                    <div class="ilosc_domow">
+                        (23)
+                    </div>
+                    <i style="font-size:24px; float: right; padding-right: 17px; padding-top: 3px" class="fa">&#xf054;</i>
+                </div>
+            </div>
+        </div>
+        <div class="pic2">
+            <div class="pic_2_d">
+                <img src="img/architecture-balcony-building-534182.jpg" width="100%" style="border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                <div class="podpis_obrazka_2">
+                    <div class="nazwa_domu">
+                        Domy murowane
+                    </div>
+                    <div class="ilosc_domow">
+                        (23)
+                    </div>
+                    <i style="font-size:24px; float: right; padding-right: 17px; padding-top: 3px" class="fa">&#xf054;</i>
+                </div>
+            </div>
+        </div>
+        <div class="pic2">
+            <div class="pic_2_d">
+                <img src="img/architecture-balcony-building-534182.jpg" width="100%" style="border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                <div class="podpis_obrazka_2">
+                    <div class="nazwa_domu">
+                        Domy wielorodzinne
+                    </div>
+                    <div class="ilosc_domow">
+                        (23)
+                    </div>
+                    <i style="font-size:24px; float: right; padding-right: 17px; padding-top: 3px" class="fa">&#xf054;</i>
+                </div>
+            </div>
+        </div>
+        <div class="pic2">
+            <div class="pic_2_d">
+                <img src="img/architecture-balcony-building-534182.jpg" width="100%" style="border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                <div class="podpis_obrazka_2">
+                    <div class="nazwa_domu">
+                        Domy letniskowe
+                    </div>
+                    <div class="ilosc_domow">
+                        (23)
+                    </div>
+                    <i style="font-size:24px; float: right; padding-right: 17px; padding-top: 3px" class="fa">&#xf054;</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="order">
+        <h2>Wolisz dotyk papieru? Zamów bezpłatny katalog!</h2><div id="o_button">ZAMÓW TERAZ</div>
+        <i style="font-size:12px; float:left; padding-top: 7px" class="fa">&#xf00c;</i><div class="o_text">Ponad 200 projektów z pełnym opisem</div><br>
+        <i style="font-size:12px; float:left; padding-top: 7px" class="fa">&#xf00c;</i><div class="o_text">Artykuły i porady dotyczące wyboru projektu</div><br>
+        <i style="font-size:12px; float:left; padding-top: 7px" class="fa">&#xf00c;</i><div class="o_text">Bezpłatna dostawa</div>
+    </div>
+    <div id="prezentacja">
+        <div class="prez" style="width: 36%; padding-left: 8%">
+            <h4><img src="img/project-ico.png" width="13%" style="margin-right: 15px">Wyjątkowe projekty domów</h4>
+            <p>Jako firma z wieloletnim stażem w branży architektonicznej, oferujemy szeroki wybórprojektów gotowych. Przystosowane na przeróżne warunki, trafią w gusta najbardziej wymagających unwestorów.</p>
+        </div>
+        <div class="prez" style="width: 28%">
+            <h4><img src="img/piggybank-ico.png" width="13%" style="margin-right: 15px">Projekty tanie w budowie</h4>
+            <p>Dzięki nieustającej optymalizacji, nasze projekty spełniają wysokie standardy energoozczędności, przy zastosowaniu przemyślanych rozwiązań ograniczających koszty budowy. Stawiamy na prostote i minimalizm.</p>
+        </div>
+        <div class="prez" style="width: 36%; padding-right: 8%">
+            <h4><img src="img/help-ico.png" width="13%" style="margin-right: 15px">Możliwa obsługa posprzedażowa</h4>
+            <p>Kontakt z projektantem nie kończy się na zakupie projektu - pomagamy w procesie adaptacji, doradzamy w trakcie budowy.</p>
+        </div>
+    </div>
+    <div id="onas">
+        <h3>O naszej pracowni</h3>
+        <p style="font-size: 18px">Nasza pracownia od ponad 20 lat specjalizuje się w projektowaniu domów jednorodzinnych. Śledząc najnowsze trendy w dziedzinie budownictwa mieszkaniowego, nieustannie udoskonalamy naszą ofertę, dopasowując projekty     do ewoluujących potrzeb i oczekiwań Polakow. Jesteśmy dumni z faktu, że nasze gotowe projekty domów co roku trafiają w gusta coraz większej grupy inwestorów, doceniających ich ergonoomię, wygląd oraz rozwiązania     technologiczne.
+            Nasza oferta projektow gotowych zawiera przekrój zaarówno przez projekty dużych rezydencji, jak i małych i prostych domków jednorodzinnych. Szeroki wybór budynków wielolokajowych trafi w gusta osób, które budowę domu traktują w kategoriach inwestycji.<br>
+            W Domowych Klimatach wierzymy, że kluczem do ciągłego rozwoju jest zachowanie świerzego spojrzenia. Dbamy o to, by w naszym zespole nie zabrakło zarówno doświadczonych, jak i młodych projektantów. Takie podejście idzie w parze ciągle rozwijającymi się technologiami, zwłaszcza w dziedzinie energooszczędności.<br><br>
+            Zapraszamy do współpracy!
+        </p>
+        <a style="font-size: 19px; color: black;" href="">Dowiedz się wiecej</a>
+    </div>
+    <div id="galery">
+        <div style="min-width: 43%;max-width: 43%; float: left;position: absolute;margin-top: 3%;margin-left: 1%">
+            <p style="font-size: 2vw">Realizacje naszych klientów<i style="font-size:1.6vw;top:0;padding-left: 0.5%" class="fa">&#xf061;</i></p>
+        </div>
+        <a href="img/architectural-design-architecture-blue-sky-462358.jpg" data-lightbox="image-1"><img src="img/architectural-design-architecture-blue-sky-462358.jpg" style="float: right; width: 55.3%; margin-right:1.7%; margin-bottom: 2%" class="g_pic"></a>
+        <a href="img/apartment-architectural-design-architecture-323780.jpg" data-lightbox="image-1"><img src="img/apartment-architectural-design-architecture-323780.jpg" style="float: left; width: 41.3%; margin-top: 11%; margin-right:1.7%; margin-bottom: 2%" class="g_pic"></a>
+        <a href="img/architecture-building-facade-164558.jpg" data-lightbox="image-1"><img src="img/architecture-building-facade-164558.jpg" style="float: left; width: 32.3%; margin-right:1.7%; margin-bottom: 2%" class="g_pic"></a>
+        <a href="img/architecture-clouds-daylight-259588.jpg" data-lightbox="image-1"><img src="img/architecture-clouds-daylight-259588.jpg" style="float: left; width: 31.3%; margin-right:1.7%; margin-bottom: 2%" class="g_pic"></a>
+        <a href="img/architecture-building-driveway-186077.jpg" data-lightbox="image-1"><img src="img/architecture-building-driveway-186077.jpg" style="float: left; width: 31.3%; margin-right:1.7%; margin-bottom: 2%" class="g_pic"></a>
+    </div>
+    <div id="help">
+        <h3 style="padding-bottom: 20px;">Pomagamy w budowie</h3>
+        <div class="h_div">
+            <h5><i style="font-size:24px; float: left" class="fa">&#xf128;</i>Jak wybrać projekt</h5>
+            <p>Doradzamy, jaką decyzję podjąć</p>
+        </div>
+        <div class="h_div">
+            <div class="gratis">GRATIS</div>
+            <h5><i style="font-size:24px; float: left" class="fa">&#xf02d;</i>Dziennik budowy</h5>
+            <p>Śledź swoją budowę z naszym dzienniiem</p>
+        </div>
+        <div class="h_div">
+            <div class="gratis">GRATIS</div>
+            <h5><i class="material-icons" style="font-size: 30px; float: left">local_atm</i>Kosztorys projektu</h5>
+            <p>Wiesz ile materiałów zamówić i jakie poniesiesz koszty</p>
+        </div>
+        <div class="h_div">
+            <h5><i class="material-icons" style="font-size: 30px; float: left">group</i>Możliwość kontaktu z autorem projektu</h5>
+            <p>Odpowiadamy na pytania dotyczące projektów</p>
+        </div>
+        <div class="h_div">
+            <h5><i class="material-icons" style="font-size: 30px; float: left">message</i>Wymiana opinii</h5>
+            <p>Poznaj innych budujących na naszym forum</p>
+        </div>
+    </div>
+    <div id="newsletter">
+        <div style="float: left">
+            <img src="img/apartment-architectural-design-architecture-323780.jpg" style="position: absolute;left: 5%;top:-40px; width: 400px">
+            <h4>Nie przegap nowych projektów.</h4>
+            <i style="font-size:12px; float:left; padding-top: 7px" class="fa">&#xf00c;</i><div class="o_text">Ponad 200 projektów z pełnym opisem</div><br>
+            <i style="font-size:12px; float:left; padding-top: 7px" class="fa">&#xf00c;</i><div class="o_text">Artykuły i porady dotyczące wyboru projektu</div><br>
+            <i style="font-size:12px; float:left; padding-top: 7px" class="fa">&#xf00c;</i><div class="o_text">Bezpłatna dostawa</div>
+        </div>
+        <div id="zapisz">
+            <h4>Zapisz się do newslettera!</h4>
+            <p>Twój e-mail:</p>
+            <input class="form-control" id="exampleFormControlInput1" placeholder="adres@mail.pl">
+        </div>
+    </div>
+    <div id="sponsorzy">
+        <h2>Nasi partnerzy</h2>
+        <div style="display: inline-block">
+            <img src="img/isover.png" width="15%" style="float: left; margin-left: 5%">
+            <img src="img/termo.png" width="20%" style="float: left; margin-left: 5%">
+            <img src="img/fakro.jpg" width="13%" style="float: left; margin-left: 5%">
+            <img src="img/mitek.jpg" width="7%" style="float: left; margin-left: 5%">
+            <img src="img/isover.png" width="15%" style="float: left; margin-left: 5%">
+        </div>
+    </div>
+    <div id="dol">
+        <div class="dol_div">
+            <h5>Przeznaczenie</h5>
+            <a href="">Jednorodzinne</a><br>
+            <a href="">Dwurodzinne</a><br>
+            <a href="">Wielorodzinne</a><br>
+            <a href="">Dwulokalowe, bliźniaki</a><br>
+            <a href="">Szeregowe</a><br>
+            <a href="">Domki letniskowe</a><br>
+            <a href="">Hotele i pensjonaty</a><br>
+            <a href="">Usługowe</a>
+        </div>
+        <div class="dol_div">
+            <h5>Wielkość</h5>
+            <a href="">Małe domy</a><br>
+            <a href="">Średnie domy</a><br>
+            <a href="">Duże domy</a>
+        </div>
+        <div class="dol_div">
+            <h5>Kondygnacje</h5>
+            <a href="">Parterowe</a><br>
+            <a href="">Piętrowe</a><br>
+            <a href="">Z piwnicą</a><br>
+            <a href="">Z poddaszem</a>
+        </div>
+        <div class="dol_div">
+            <h5>Wydajność</h5>
+            <a href="">Tanie w budowie</a><br>
+            <a href="">Energooszczędne</a>
+        </div>
+        <div class="dol_div">
+            <h5>Styl</h5>
+            <a href="">Klasyczne</a><br>
+            <a href="">Drewniane</a><br>
+            <a href="">Dworki</a><br>
+            <a href="">Nowoczesne</a>
+        </div>
+        <div class="dol_div">
+            <h5>Działka</h5>
+            <a href="">Działka na skarpie</a><br>
+            <a href="">Wąska działka</a><br>
+            <a href="">Płytka działka</a><br>
+            <a href="">Mała działka</a>
+        </div>
+        <div class="dol_div">
+            <h5>Inne</h5>
+            <a href="">Garaże, altany, płoty</a><br>
+            <a href="">Domy MDM</a><br>
+            <a href="">Bestsellery</a><br>
+            <a href="">Nowości</a>
+        </div>
+        <div id="zakup">
+            <h3>Zakup projektu</h3>
+            <a href="">Proces zakupu</a><br>
+            <a href="">Regulamin</a><br>
+            <a href="">Zwroty i reklamacje</a><br>
+            <a href="">Negocjacje cen</a><br>
+            <a href="">Metody płatności</a><br>
+            <a href="">Polityka prywatności</a>
+        </div>
+    </div>
+    
+<script src="scripts/close_popup.js"></script>
+<script src="scripts/show-popup.js"></script>
+<script src="scripts/form-rezults.js"></script>
+    
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="lightbox2-master/dist/js/lightbox-plus-jquery.js"></script>
+<script src="scripts/close_popup.js"></script>
+<script src="scripts/show-popup.js"></script>
+<script src="scripts/form-rezults.js"></script>
+</body>
+</html>

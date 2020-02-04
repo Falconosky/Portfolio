@@ -1,0 +1,751 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    padding: 0;
+    margin: 0px;
+}
+
+#przyciemnienie{
+    width: 100%;
+    height: 500px;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.78;
+    z-index: -1;
+}
+
+td{
+    background-image: url(img/architecture-clouds-daylight-259588.jpg);
+    background-size: 130%;
+    background-position: left;
+}
+
+#logowanie{
+    position: absolute;
+    right: 80px;
+    font-size: 14px;
+    margin-right: 20px;
+    color: white;
+}
+
+#logowanie a{
+    color: white;
+    text-decoration:none;
+}
+
+#lang_schowane a {
+    color: white;
+    display: block;
+    padding: 0;
+    margin-top: 5px;
+}
+
+#lang_schowane {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #232e3f;
+    width: 50px;
+}
+#proj {
+    color: white;
+    border: none;
+    position: relative;
+    display: inline-block;
+}
+
+#proj:hover{
+    color: black;
+}
+
+#proj_sch a {
+    color: white;
+    display: block;
+    padding: 0;
+}
+
+#proj_sch {
+    background-color: #e0e0e0;
+    position: absolute;
+    z-index: 1;
+    padding-top: 0px;
+    margin-top: 0px;
+    width: 100%;
+    left: 0px;
+    text-align: center;
+    display: none;
+}
+
+#proj_sch a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+#proj_sch a:hover{
+    background-color: #ededed;
+}
+
+#lang:hover #lang_schowane {display: block;}
+#proj:hover #proj_sch {display: block;}
+
+#lang {
+    position: absolute;
+    display: inline-block;
+    color:white;
+    font-size: 14px;
+    right: 60px;
+    z-index: 4;
+}
+
+#lang i{
+    margin-right: 5px;
+}
+
+#logo{
+    margin-top: 25px;
+    margin-left: 120px;
+    float: left
+}
+
+#sel_bud{
+    border: none;
+}
+
+#menu{
+    padding-top: 170px;
+    color: white;
+    text-align: center;
+}
+
+#banner{
+    background:#548bc2;
+    width:100%;
+    float:right;
+    padding:1%;
+    overflow:hidden;
+    background-image: url(img/architecture-clouds-estate-280222.jpg.png);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    height: 500px;
+    background-position: center;
+    position: absolute;
+    top: -00px;
+    z-index: -2;
+    padding-top: 215px;
+    padding: 0px;
+}
+
+#main{
+    position: relative;
+}
+
+#guzik,.form-control{
+    margin-top: 8px;
+}
+
+#szukaj{
+    width: 13%;
+    float: left;
+    background-color: #e2e2e2;
+    height: 90px;
+    text-align: center;
+    padding: 48px 20px 48px 6px;
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+#menu_tab{
+    background-color: #e2e2e2;
+    color: black;
+    margin: 0px 120px;
+    text-align: justify;
+}
+
+#powierzchnia_uzytkowa{
+    float: left;
+    background-color: #e2e2e2;
+    width: 15%;
+}
+
+#top_menu{
+    color:white;
+    position: absolute;
+    right: 4%;
+    width: 100%;
+}
+
+.top:hover{
+    background-color: #e0e0e0;
+    color: black;
+}
+
+.nazwa_domu_1{
+    float:left;
+    font-weight: 700;
+    font-size: 2vw;
+}
+
+.nazwa_domu{
+    float:left;
+    font-weight: 700;
+    font-size: 100%;
+}
+
+.ilosc_domow_1{
+    float:left;
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 1.1vw;
+}
+
+.ilosc_domow{
+    float:left;
+    font-size: 1vw;
+    padding-top: 7px;
+    padding-left: 5px;
+}
+
+.podpis_obrazka_1{
+    background-color: #c4c4c4;
+    height: 128px;
+    padding-top: 40px;
+    padding-left: 40px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.podpis_obrazka_2{
+    background-color: #c4c4c4;
+    height: 60px;
+    padding-top: 17px;
+    padding-left: 17px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+#section-container>h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#section-container{
+    position: relative;
+    top: 130px;
+    width: 100%;
+    padding: 0px 70px;
+}
+
+#pic1{
+    width: 66%;
+    float: left;
+    padding: 10px;
+    position: relative;
+}
+
+.pic2{
+    position: relative;
+    width: 33%;
+    float: left;
+    padding: 10px;
+}
+
+.pic_1_d{
+    border-radius: 15px 15px 15px 15px;
+}
+
+.pic_2_d{
+    border-radius: 15px 15px 15px 15px;
+}
+
+.pic_1_d:hover{
+    box-shadow: 0px 0px 20px -2px rgba(0,0,0,1);
+}
+
+.pic_2_d:hover{
+    box-shadow: 0px 0px 20px -2px rgba(0,0,0,1);
+}
+
+.top{
+    float: right;
+    padding: 5px 2%;
+    margin-top: 3%;
+    max-width: 20%;
+    cursor: pointer;
+}
+
+#top_menu p{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 40px;
+}
+
+#zaawansowane{
+    width: 100%;
+    text-align: right;
+    background-color: #e2e2e2;
+    padding-right: 48px;
+    padding-bottom: 1px;
+    
+}
+
+td{
+    height: 2vw;
+}
+
+#nazwa_projektu input{
+    border: none;
+    background-color: #e2e2e2;
+    padding-left: 0px;
+    border-bottom: 2px solid;
+}
+
+#typ_budynku{
+    float: left;
+    background-color: #e2e2e2;
+    width: 17%;
+}
+
+#nazwa_projektu{
+    float: left;
+    background-color: #e2e2e2;
+    width: 20%;
+}
+
+#miejsca_w_garazu{
+    float: left;
+    width: 10%;
+    background-color: #e2e2e2;
+    width: 12%;
+}
+
+#order{
+    position: relative;
+    float: left;
+    border-style: solid;
+    border-width: 2px 0px 2px 0px;
+    width: 100%;
+    margin-top: 220px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 200px;
+    margin-bottom: 100px;
+}
+
+#order>h2{
+    font-size: 26px;
+}
+
+#onas{
+    position: relative;
+    float: left;
+    margin-top: 30px;
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
+.prez{
+    float: left;
+    padding: 0px 30px;
+    background-color: #dbdbdb;
+    height: 270px;
+    padding-top: 25px;
+}
+
+.o_text{
+    float: left;
+    margin-left: 5px;
+}
+
+#galery{
+    position: relative;
+    float: left;
+    margin-top: 100px;
+    padding-left: 140px;
+    padding-right: 140px;
+    width: 100%;
+}
+
+#prezentacja{
+    position: relative;
+}
+
+#help{
+    position: relative;
+    float: left;
+    margin-top: 50px;
+    width: 100%;
+    background-color: #dbdbdb;
+    padding-top: 30px;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 30px;
+    text-align: center;
+    margin-bottom: 130px;
+}
+
+.h_div{
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    font-size: 17px;
+    height: 180px;
+    padding: 15px;
+    border: 2px solid #000000;
+    border-radius: 8px 8px 8px 8px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin: 10px;
+}
+
+.h_div p{
+    float: left;
+}
+
+.h_div h5{
+    font-size: 24px;
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+}
+
+.gratis{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    padding: 1px 5px;
+    font-weight: 500;
+}
+
+#o_button{
+    position: absolute;
+    top: 40px;
+    right: -20px;
+    margin-right: 24%;
+    border-radius: 7px 7px 7px 7px;
+    padding: 10px 15px;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 18px;
+}
+
+.g_pic:hover{
+    box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+}
+
+#o_button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+}
+
+#kondygnacja,#powierzchnia_uzytkowa,#miejsca_w_garazu,#nazwa_projektu{
+    height: 90px;
+    text-align: left;
+    padding: 20px 6px;
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+#kondygnacja{
+    float: left;
+    background-color: #e2e2e2;
+    width: 11%;
+}
+
+#typ_budynku{
+    height: 90px;
+    text-align: left;
+    padding: 20px 6px 20px 24px;
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+#piwnica{
+    float: left;
+    background-color: #e2e2e2;
+    width: 9%;
+    height: 90px;
+    text-align: center;
+    padding: 54px 6px 20px;
+    vertical-align: middle;
+    font-size: 17px;
+}
+
+#content{
+    position: absolute;
+    width: 100%;
+    top:500px;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #e2e2e2;
+}
+
+#newsletter{
+    background-color: #d1d1d1;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-left: 40%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#zapisz{
+    float:left;
+    margin-left: 5%;
+}
+
+#sponsorzy{
+    position: relative;
+    float: left;
+    margin-top: 150px;
+    text-align: center;
+}
+
+#dol{
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #d1d1d1;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 6%;
+}
+
+.dol_div{
+    float: left;
+    margin-left: 2%;
+}
+
+#zakup{
+    float: right;
+    font-size: 18px;
+    margin-right: 15%;
+}
+
+#dol a{
+    color: black;
+}
+
+#popup{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#popup-container{
+    z-index: 11;
+    position:fixed;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.5);
+    padding: 30px 70px 30px;
+    background: rgb(230, 230, 230);
+    width: 810px;
+    min-height: 355px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    text-align: center;
+}
+
+#popup-container h2{
+    margin: 0 0 30px;
+    font-size: 24px;
+}
+
+.close {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+    border: 2px solid #000;
+    border-radius: 50%;
+    color: #000;
+    text-align: center;
+    font-weight: 900;
+    width: 30px;
+    height: 30px;  
+    font-size: 22.5px;
+    transition-duration: 0.2s;
+}
+
+.close:hover{
+    background-color: #000;
+    border: 2px solid #000;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+
+}
+
+.popup-background{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.button-r-box {
+    display: inline-block;
+    position: relative;
+    padding: 10px 30px 10px 38px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 5px;
+    border-radius: 20px;
+    user-select: none;
+    background-color: #fff;
+    width: 250px;
+}
+
+#popup_prawy input{
+    margin: 5px;;
+}
+
+#popup_lewy{
+    float: left;
+    user-select: none;
+}
+
+#popup_prawy{
+    float: right;
+}
+
+.button-r-box input {
+    display: none;
+}
+
+.checkmark {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 50%;
+    transition-duration: 0.2s;
+}
+
+.button-r-box:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.button-r-box input:checked ~ .checkmark {
+    background-color: #3589CC;
+    border: 1px solid #3589CC;
+}
+
+
+.tel-form{
+    position: absolute;
+    top: 140px;
+    right: 70px;
+    height:40px;
+    padding: 7px;
+    font-size: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.popup-summary{
+    position: absolute;
+    top: 240px;
+    right: 70px;
+    padding: 15px 40px;
+    border: 3px solid #000;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;    
+    transition-duration: 0.2s;
+}
+
+.popup-summary:hover{
+    border: 3px solid #666;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.3);
+    transition-duration: 0.3s;
+}
+
+#display{
+    position: absolute;
+    top: 210px;
+    right: 0px;
+    width: 50%;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.2s;
+}
+
+#tel-alert{
+    position: absolute;
+    display: block;
+    width: 40%;
+    height: 20px;
+    top: 110px;
+    right: 40px;
+    text-align: left;
+    font-size: 16px;
+    color: #000;
+    float:right;
+    text-align: center;
+}
+
+#options-alert{
+    height: 15px;
+    margin: -25px 0 10px;
+    font-size: 16px;
+    color: #CC0300;
+    float: left;
+    padding-left: 75px;
+}
+
+#datepicker{
+    display: none   ;
+    width: 130px;
+    float: right;
+    margin: 0 50px;
+    text-align: center;
+    font-size: 20px;
+    background: rgb(230, 230, 230);
+    border: 0;
+}
+
+/*@media only screen and (max-width:900px)
+{
+    #banner{
+        width:88%;
+        position:absolute;
+        height:30px;
+        display: none;
+    }
+    #przyciemnienie{display: none;}
+    #logo{display: none;}
+    #logowanie{display: none;}
+}*/
