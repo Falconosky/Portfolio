@@ -175,7 +175,25 @@ header{
     border-radius: 0px 0px 10px 10px;
 }
 
+#github_img{
+    width: 5vh;
+}
 
+#github{
+    position: absolute;
+    left:33vh;
+    top: 12vh;
+    z-index: 9999;
+}
+
+#github:hover{
+    top:9.5vh;
+    left:30.5vh;
+}
+
+#github_img:hover{
+    width: 10vh;
+}
 
 #dom_tekst b{
     font-size: 3vh;
