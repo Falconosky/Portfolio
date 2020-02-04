@@ -196,15 +196,15 @@ header{
     width: 10vh;
 }
 
-#linked_img{
-    width: 5vh;
-    z-index: 9999;
-}
-
 #linked{
     position: absolute;
     left:43vh;
     top: 12.3vh;
+    z-index: 9999;
+}
+
+#linked_img{
+    width: 5vh;
     z-index: 9999;
 }
 
